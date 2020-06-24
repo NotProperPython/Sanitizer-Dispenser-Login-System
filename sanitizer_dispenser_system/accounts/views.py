@@ -268,4 +268,11 @@ class SetNewPasswordView(View):
             messages.error(request, 'Something went wrong')
             return render(request, 'auth/set-new-password.html', context)
 
-        return render(request, 'auth/set-new-password.html', context)
+        #return render(request, 'auth/set-new-password.html', context)
+
+
+class AboutView(View):
+    def get(self, request):
+        return render(request, 'about.html')
+
+

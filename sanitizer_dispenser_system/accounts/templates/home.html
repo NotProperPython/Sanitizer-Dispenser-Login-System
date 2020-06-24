@@ -1,12 +1,87 @@
 {% extends 'base.html'%}
+{% load static %}
+
+{% block title%}  Home  {%endblock%}
+
+{% block head%}
+<link rel="stylesheet" href="{% static 'css/home.css'%}">
+{%endblock%}
 
 {% block content %}
 
-    {{user.username}}
+<body>
 
-    <form action="{% url 'logout'%}" method="POST">
-        {% csrf_token %}
-        <input type="submit" value="Logout" class="btn btn-info">
+<main>
+    <div class="container my-5">
+        <div class="card-body text-center">
+            <h4 class="card-title">Welcome, {{user.username}}</h4>
+            <p class="card-text">Registered dispensers are listed below, you can add more by clicking the button.</p>
+        </div>
+        <div class="card">
+            <button id="add__new__list" type="button" class="btn btn-success position-absolute" data-toggle="modal"
+                    data-target=".bd-example-modal-lg"><i class="fas fa-plus"></i> Add a new Dispenser
+            </button>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Dispenser Nickname</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">ID</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Dispenser 1</td>
+                    <th>online</th>
+                    <th>1</th>
+                    <td><a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a></td>
+                    <td><a class="btn btn-sm btn-info" href="#"><i class="fas fa-info-circle"></i> Details</a></td>
+                </tr>
+                <tr>
+                    <td>Dispenser 2</td>
+                    <th>offline</th>
+                    <th>2</th>
+                    <td><a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a></td>
+                    <td><a class="btn btn-sm btn-info" href="#"><i class="fas fa-info-circle"></i> Details</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Large modal -->
 
-    </form>
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Special title treatment</h4>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class=" card col-8 offset-2 my-2 p-3">
+                        <form>
+                            <div class="form-group">
+                                <label for="dispenserNickname">Dispenser Nickname</label>
+                                <input type="text" class="form-control" name="dispenserNickname" id="dispenserNickname"
+                                       placeholder="Enter your Dispenser Nickname">
+                            </div>
+                            <div class="form-group">
+                                <label for="dispenserID">Dispenser ID</label>
+                                <input type="text" class="form-control" name="dispenserID" id="dispenserID"
+                                       placeholder="Enter your Dispenser ID">
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-block btn-primary">CONNECT</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+
 {%endblock%}
