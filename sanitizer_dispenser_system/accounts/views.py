@@ -45,7 +45,7 @@ class RegistrationView(View):
         password2 = request.POST.get('password2')
         if len(password) < 6:
             messages.add_message(request, messages.ERROR,
-                                 'passwords should be atleast 6 characters long')
+                                 'passwords should be at-least 6 characters long')
             context['has_error'] = True
         if password != password2:
             messages.add_message(request, messages.ERROR,
@@ -103,6 +103,7 @@ class RegistrationView(View):
         )
 
         EmailThread(email_message).start()
+        email_message.send()
         messages.add_message(request, messages.SUCCESS,
                              'account created succesfully')
 
