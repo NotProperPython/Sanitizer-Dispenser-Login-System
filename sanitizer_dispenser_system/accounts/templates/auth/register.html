@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% load static %}
-
+{% block title%}  Register  {%endblock%}
 
 {% block content%}
 
@@ -15,21 +15,12 @@
             </div>
             <div class="col-md-8">
                 <div class="card mt-5">
-                    <img src="https://mta-instagram-clone.herokuapp.com/static/img/instagram-wordmark.svg"
+                    <img src="{%static 'images/dispenser1.jpg'%}"
                          class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-muted">Sign up to see photos and videos from your friends.</h5>
-                        <a href="" class="btn btn-sm btn-block btn-primary"><i class="fa fa-facebook"></i> Login with
-                            Facebook</a>
 
                         <div class="row">
-                            <div class="col-md-5">
-                                <hr>
-                            </div>
-                            <div class="col-md-2">
-                                <p class="text-muted">OR</p>
-                            </div>
-                            <div class="col-md-5">
+                            <div class="col-md-12">
                                 <hr>
                             </div>
                         </div>

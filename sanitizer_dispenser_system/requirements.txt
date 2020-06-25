@@ -1,0 +1,17 @@
+appdirs==1.4.0
+asgiref==3.2.7
+certifi==2020.6.20
+chardet==3.0.4
+codecov==2.1.7
+coverage==5.1
+Django==3.0.7
+django-six==1.0.4
+idna==2.9
+packaging==16.8
+pyparsing==2.1.10
+pytz==2020.1
+requests==2.24.0
+six==1.10.0
+sqlparse==0.3.1
+urllib3==1.25.9
+validate-email==1.3

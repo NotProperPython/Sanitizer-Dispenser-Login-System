@@ -35,9 +35,9 @@
                     <a class="nav-link" href="{% url 'about'%}">About</a>
                 </li>
                 {% if not user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login'%}">Login</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login'%}">Login</a>
+                </li>
                 {% endif %}
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -46,6 +46,8 @@
                         <input type="submit" value="Logout" class="btn btn-info">
                     </form>
                 </li>
+                <li class="nav-item">Hi,{{user.username}}</li>
+
                 {% endif %}
             </ul>
         </div>

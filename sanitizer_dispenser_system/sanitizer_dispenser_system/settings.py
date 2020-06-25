@@ -124,12 +124,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com' #os.environ.get('EMAIL_HOST')
-EMAIL_HOST_USER = 'umerstarboy10@gmail.com' #os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = '' #os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = 'True' #os.environ.get('EMAIL_USE_TLS')
-EMAIL_PORT = '587' #os.environ.get('EMAIL_PORT')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'umerstarboy10@gmail.com'
+EMAIL_HOST_PASSWORD = 'tubaismylife10'
+EMAIL_USE_TLS = 'True'
+EMAIL_PORT = '587'
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
