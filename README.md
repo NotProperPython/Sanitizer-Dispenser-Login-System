@@ -19,3 +19,18 @@ function available in the web-app at the moment!
 <br >
 <br >
 Thanks for checking out our web-app!
+
+---
+
+**Use this account to login**
+username: test1
+pass: programming1
+
+**OR**
+
+**Make you own account**
+
+Make sure to follow the steps:
+- Add you Gmail credentials at the end of the *settings.py* file
+- In your Gmail security allow unsecure apps
+- Run ```python manage.py runserver```
